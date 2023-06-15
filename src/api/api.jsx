@@ -9,4 +9,14 @@ const instance = axios.create({
   },
 });
 
+export const getContacts = () => {
+    return instance.get(`/${CONTACTS_URL}`)
+}
 
+export const addContact = data => {
+    return instance.post(`/${CONTACTS_URL}`, data)
+}
+
+export const deleteContact = id => {
+    return instance.delete(`/${CONTACTS_URL}/${id}`)
+}
