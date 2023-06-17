@@ -9,7 +9,7 @@ const instance = axios.create({
   },
 });
 
-export const getContacts = () => {
+export const selectContacts = () => {
     return instance.get(`/${CONTACTS_URL}`)
 }
 

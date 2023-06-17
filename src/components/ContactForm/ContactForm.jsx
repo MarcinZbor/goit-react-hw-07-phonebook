@@ -2,10 +2,10 @@ import React from 'react';
 import styles from './ContactForm.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { postContactOperation } from 'redux/operations';
-import { getContacts } from 'redux/selectors';
+import { selectContacts } from 'redux/selectors';
 
 const ContactForm = () => {
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
   const formSubmit = event => {

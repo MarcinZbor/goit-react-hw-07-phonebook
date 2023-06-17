@@ -1,12 +1,12 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getContacts, addContact, deleteContact } from '../api/api';
+import { selectContacts, addContact, deleteContact } from '../api/api';
 
 export const getContactsOperation = createAsyncThunk(
   'contacts/getContacts',
 
   async (_, thunkAPI) => {
     try {
-      const { data } = await getContacts();
+      const { data } = await selectContacts();
       return data;
     } catch (error) {
       console.log('error', error);
