@@ -1,8 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
-import {  selectfilteredContacts } from 'redux/selectors';
+import {  selectfilteredContacts, selectLoading } from 'redux/selectors';
 import { useEffect } from 'react';
 import styles from './ContactList.module.css';
-import { selectLoading } from 'redux/selectors';
 import { getContactsOperation, deleteContactOperation } from 'redux/operations';
 
 
